@@ -1,17 +1,5 @@
-# define the stages of the pipeline
-stages:
-  - stage: Print
-    displayName: Print stage
-    jobs:
-      - job: Print
-        displayName: Print job
-        pool:
-          vmImage: windows-latest
-        steps:
-          - script: |
-              echo "The value of the MY_VAR environment variable is: $MY_VAR"
-              az pipelines variable-group list --output table
-            displayName: Print environment variable
-            env:
-              MY_VAR: Hello World!
-              VAR_2: Hello World 2!
+pool:
+	vmImage: "ubuntu-latest"
+steps:
+- bash: cal 2023
+  displayName: "Run cal command"
