@@ -2,4 +2,3 @@ pool:
 	vmImage: "ubuntu-latest"
 steps:
 - bash: cal 2023
-  displayName: "Run cal command"
