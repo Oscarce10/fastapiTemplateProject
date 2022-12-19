@@ -1,8 +1,8 @@
-pool:
-  vmImage: 'ubuntu-20.04'
-
 steps:
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: echo $(pwd)
+  - task: Bash@3
+    displayName: Execute bash
+    env:
+      NAME: Jason
+      AGE: 48
+    inputs:
+      script: echo Hello
