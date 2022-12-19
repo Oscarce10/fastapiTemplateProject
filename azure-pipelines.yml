@@ -1,4 +1,4 @@
 pool:
 	vmImage: "ubuntu-latest"
 steps:
-- bash: echo $(cal 2023)
+- bash: echo "Hello"
