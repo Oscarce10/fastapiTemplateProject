@@ -1,8 +1,15 @@
-pool:
-  vmImage: 'ubuntu-20.04'
-
-steps:
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: echo $(pwd)
+# define the stages of the pipeline
+stages:
+  - stage: Print
+    displayName: Print stage
+    jobs:
+      - job: Print
+        displayName: Print job
+        pool:
+          vmImage: windows-latest
+        steps:
+          - script: |
+              echo "The value of the MY_VAR environment variable is: $MY_VAR"
+            displayName: Print environment variable
+            env:
+              MY_VAR: Hello World!
