@@ -10,6 +10,8 @@ stages:
         steps:
           - script: |
               echo "The value of the MY_VAR environment variable is: $MY_VAR"
+              az pipelines variable-group list --output table
             displayName: Print environment variable
             env:
               MY_VAR: Hello World!
+              VAR_2: Hello World 2!
