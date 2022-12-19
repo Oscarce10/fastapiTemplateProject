@@ -1,4 +1,4 @@
 pool:
-	vmImage: "ubuntu-latest"
+  vmImage: 'ubuntu-latest'
 steps:
-- bash: echo "Hello"
+- bash: echo 'Hello'
