@@ -3,4 +3,12 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 steps:
-- bash: cal 2022
+- script: |
+    echo Hello, world!
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: "Run dependencies"
+- script: |
+    echo Finished!
+  displayName: "Run Finished"
+
