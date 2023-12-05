@@ -31,7 +31,7 @@ steps:
         ls
         
         
-        cd _Oscarce10_fastapiTemplateProject
+        printenv | grep AWS
         
         serverless plugin install -n serverless-python-requirements
         
