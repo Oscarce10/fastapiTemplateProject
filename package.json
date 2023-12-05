@@ -1,0 +1,6 @@
+{
+  "name": "fastapitemplateproject",
+  "devDependencies": {
+    "serverless-python-requirements": "^6.0.1"
+  }
+}

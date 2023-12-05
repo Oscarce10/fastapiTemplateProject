@@ -347,3 +347,7 @@ cython_debug/
 
 # Ignore code-workspaces
 *.code-workspace
+
+
+node_modules/
+.serverless/

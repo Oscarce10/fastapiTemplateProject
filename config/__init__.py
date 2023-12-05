@@ -1,5 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
+from mangum import Mangum
 
 from api.framework.routers import root
 
@@ -13,6 +14,8 @@ app = FastAPI(
 app.include_router(
     root.router
 )
+
+handler = Mangum(app)
 
 
 def start():

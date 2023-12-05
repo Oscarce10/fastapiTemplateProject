@@ -1,0 +1,18 @@
+service: fastapiTemplate
+
+provider:
+  name: aws
+  runtime: python3.9
+  stage: dev
+  region: us-east-2
+  architecture: arm64
+
+
+plugins:
+  - serverless-python-requirements
+
+functions:
+    app:
+        handler: config.handler
+        events:
+            - http: ANY /
