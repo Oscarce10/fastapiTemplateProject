@@ -7,6 +7,7 @@ trigger:
   - master
   - qa/*
   - dev/*
+  - refs/pull/*
 
 resources:
     repositories:
@@ -15,7 +16,7 @@ resources:
         name: Personal Projects/pipeline_base_templates
 
 extends:
-  template: templates/python.yml@templates
+  template: python.yml@templates
 
 
 #pool:
