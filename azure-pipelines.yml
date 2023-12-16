@@ -16,7 +16,7 @@ resources:
         name: Personal Projects/pipeline_base_templates
 
 extends:
-  template: templates/python.yaml@templates
+  template: python.yaml
 
 
 #pool:
