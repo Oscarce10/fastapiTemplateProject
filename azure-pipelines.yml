@@ -9,9 +9,10 @@ trigger:
 - dev/*
 
 resources:
-  - repository: templates
-    type: git
-    name: pipeline_base_templates
+    repositories:
+      - repository: templates
+        type: git
+        name: pipeline_base_templates
 
 stages:
   stage: Build
