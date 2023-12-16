@@ -4,9 +4,9 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
-- qa/*
-- dev/*
+  - master
+  - qa/*
+  - dev/*
 
 resources:
     repositories:
