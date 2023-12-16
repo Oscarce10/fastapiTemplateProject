@@ -11,7 +11,7 @@ trigger:
 
 resources:
     repositories:
-      - repository: templates
+      - repository: python_base_template
         type: git
         name: Personal Projects/pipeline_base_templates
 
