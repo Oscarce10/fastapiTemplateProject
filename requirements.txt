@@ -3,12 +3,12 @@ anyio==3.7.1
 click==8.1.7
 colorama==0.4.6
 exceptiongroup==1.2.0
-fastapi==0.104.1
+fastapi==0.99.1
 h11==0.14.0
 httptools==0.6.1
 idna==3.6
 mangum==0.17.0
-pydantic==2.5.2
+pydantic==1.10.12
 pydantic_core==2.14.5
 python-dotenv==1.0.0
 PyYAML==6.0.1
