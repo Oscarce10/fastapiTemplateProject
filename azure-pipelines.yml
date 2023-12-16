@@ -15,8 +15,8 @@ resources:
         name: pipeline_base_templates
 
 stages:
-  stage: Build
-  template: templates/python.yml@templates
+  - stage: Build
+    template: templates/python.yml@templates
 
 
 #pool:
