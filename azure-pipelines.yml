@@ -11,12 +11,12 @@ trigger:
 
 resources:
     repositories:
-      - repository: python_base_template
+      - repository: templates
         type: git
         name: Personal Projects/pipeline_base_templates
 
 extends:
-  template: python.yaml@python_base_template
+  template: python.yaml@templates
 
 
 #pool:
