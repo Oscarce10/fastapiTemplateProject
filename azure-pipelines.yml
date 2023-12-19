@@ -5,7 +5,9 @@
 
 trigger:
   - master
+  - qa
   - qa/*
+  - dev
   - dev/*
   - refs/pull/*
 
