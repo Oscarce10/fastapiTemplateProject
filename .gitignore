@@ -350,4 +350,4 @@ cython_debug/
 
 
 node_modules/
-.serverless/
+.serverless*
