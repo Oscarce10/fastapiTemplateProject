@@ -8,7 +8,8 @@ pipeline {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/dev']],
                     userRemoteConfigs: [[url: 'https://github.com/Oscarce10/fastapiTemplateProject.git/']]])
-                bash '''
+                sh '''
+                    #!/bin/bash
                     python -m venv venv
                     chmod -R a+rwx venv
                     source venv/bin/activate
