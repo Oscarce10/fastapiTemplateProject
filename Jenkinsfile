@@ -9,6 +9,9 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/dev']],
                     userRemoteConfigs: [[url: 'https://github.com/Oscarce10/fastapiTemplateProject.git/']]])
                 sh '''
+                    python -m venv venv
+                    sudo chmod -R a+rwx venv
+                    source venv/bin/activate
                     python -m pip install --upgrade pip
                     pip install flake8
                     flake8 .
