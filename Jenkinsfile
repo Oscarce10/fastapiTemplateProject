@@ -10,6 +10,7 @@ pipeline {
                     userRemoteConfigs: [[url: 'https://github.com/Oscarce10/fastapiTemplateProject.git/']]])
                 sh '''
                     #!/bin/bash
+                    cat Jenkinsfile
                     python -m venv venv
                     chmod -R a+rwx venv
                     source venv/bin/activate
