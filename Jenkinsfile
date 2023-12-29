@@ -9,9 +9,9 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/dev']],
                     userRemoteConfigs: [[url: 'https://github.com/Oscarce10/fastapiTemplateProject.git/']]])
                 sh '''
-                    ls
-                    uname -a
-                    pwd
+                    python -m pip install --upgrade pip
+                    pip install flake8
+                    flake8 .
                 '''
             }
         }
