@@ -17,14 +17,14 @@ $ pip install -r requirements.txt
 ### Pip
 
 ```bash
-uvicorn config:app --host=127.0.0.1 --port=5003 --reload --log-level=info
+uvicorn config:app --host=127.0.0.1 --port=3000 --reload --log-level=info
 ```
 
 
 ### Docker
     
 ```bash
-$ docker build -t fastapi-base .
-$ docker run -p 5003:5003 -d fastapi-base
+$ docker build -t fastapitemplate .
+$ docker run -p 3000:3000 --network host fastapitemplate
 ```
 

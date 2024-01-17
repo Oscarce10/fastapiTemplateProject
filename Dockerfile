@@ -1,14 +1,14 @@
-FROM python:3.9-bullseye
+FROM python:3.10-bullseye
 
 WORKDIR /usr/src/app
 
+COPY ./requirements.txt .
+
+RUN pip install -r /usr/src/app/requirements.txt
+
 COPY . .
 
-RUN curl -sSL https://install.python-poetry.org | python3 -
 
-ENV PATH="${PATH}:/root/.local/share/pypoetry/venv/bin/"
-RUN ["poetry", "install", "--no-dev"]
+EXPOSE 3000
 
-EXPOSE 5003
-
-CMD ["poetry", "run", "start"]
+CMD ["uvicorn", "config:app", "--host=127.0.0.1", "--port=3000"]
