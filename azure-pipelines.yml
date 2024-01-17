@@ -1,5 +1,5 @@
 trigger:
-  - container
+  - docker
 
 resources:
     repositories:
