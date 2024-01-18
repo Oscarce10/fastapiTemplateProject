@@ -1,14 +1,18 @@
 FROM python:3.10-bullseye
 
-USER app
-
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "executable" ]
 
-WORKDIR /usr/src/app
+
+RUN useradd -ms /bin/bash app
+
+USER app
+
+
+WORKDIR /home/app/src/app
 
 COPY ./requirements.txt .
 
-RUN pip install -r /usr/src/app/requirements.txt
+RUN pip install -r /home/app/src/app/requirements.txt
 
 COPY . .
 
