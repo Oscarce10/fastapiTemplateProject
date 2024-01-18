@@ -10,6 +10,6 @@ resources:
 
 
 extends:
-  template: python.yml@templates
+  template: python_docker.yml@templates
   parameters:
     repository: fastapi_template
